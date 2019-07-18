@@ -1,0 +1,15 @@
+(function() {
+    var assetId = '2193125061533541873';
+    var ersCode = document.createElement('script');
+    // ersCode.src = 'src/ers-client.js';
+    ersCode.src = 'https://storage.googleapis.com/dev-ers/ers-client0_3.js';
+    ersCode.type = 'text/javascript';
+    ersCode.async = false;
+
+    ersCode.onload = function() {
+      var e = new ErsAI();
+      e.setErsTrackingId(assetId);
+    }
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ersCode, s);
+}());
